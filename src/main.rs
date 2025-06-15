@@ -3,11 +3,11 @@ async fn test() -> i32 {
 }
 
 fn main() {
-    assync::block_on(async {
+    azink::block_on(async {
         println!("Hello, world!");
         let x = test().await;
         println!("x = {}", x);
-        assync::spawn(async {
+        azink::spawn(async {
             println!("Inside spawned task");
         });
         let y = test().await;
